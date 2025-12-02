@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+{ float start, end;
+    cout << "Vvedite nachalo diapazona:" << endl;
+    cin >> start;
+    cout << "Vvedite konec diapazona:" << endl;
+    cin >> end;
+    if (start>=end) {
+        cout << "Nachalo dolzhno byt' men'she konca";
+        return 1;
+    }
+    for (double x=start; x<=end; x++) {
+        double rad=x*3.14/180;
+        double y=rad*rad*rad-5*sin(rad/3);
+        cout << "x=" << x << "-> y=" << y << endl;
+    }
+return 0;
+}
