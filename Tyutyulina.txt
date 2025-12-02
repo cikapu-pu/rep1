@@ -2,10 +2,21 @@
 #include <cmath>
 using namespace std;
 int main ()
-{ double n=1.2;
-    do {
-    cout << n << endl;
-    n+=0.2;
-    } while (n<=3.0 + 1e-10);
+{ float start, end;
+    cout << "Vvedite nachal'ny x:" << endl;
+    cin >> start;
+    cout << "Vvedite konechny x:" << endl;
+    cin >> end;
+    if (start>=end) {
+        cout << "Nachalo dolzhno byt' men'she konca";
+        return 1;
+    }
+    for (float x=start; x<=end; x++) {
+        if (x==2||x==-2) {
+        cout << "Na 0 delit' nel'za" << endl;}
+        else {
+        float y=(x-3)/(x*x-4);
+        cout << "x=" << x << "-> y=" << y << endl;}
+    }
 return 0;
 }
